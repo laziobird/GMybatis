@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<properties url="file:/Users/laziobird/tools/workspace/mybatis-generator-usage2/src/main/resource/datasource.properties"></properties> 
+
+	<classPathEntry location="lib/mysql-connector-java-5.1.6-bin.jar" />
+
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+
+		
+
+		<jdbcConnection driverClass="${jdbc.driverClassName}"
+			connectionURL="${jdbc.url}" userId="${jdbc.username}" password="${jdbc.password}">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.zcz.model"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.zcz.dao"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.zcz.dao" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="methodNameCalculator" value="default" />
+		</javaClientGenerator>
+		
+
+		<!--
+		<table tableName="action" domainObjectName="Action">		</table>
+		<table tableName="groups" domainObjectName="Groups">		</table>
+		<table tableName="user" domainObjectName="User">		</table>
+		<table tableName="actiongroup" domainObjectName="ActionGroup">		</table>
+		<table tableName="building" domainObjectName="Building"></table>
+		<table tableName="area" domainObjectName="Area"></table>	
+		<table tableName="area" domainObjectName="Area"></table>			
+		<table tableName="field_book" domainObjectName="FieldBook"></table>	
+		<table tableName="field_book" domainObjectName="FieldBook"></table>			
+		
+		
+		<table tableName="building_hot" domainObjectName="BuildingHot">		</table>	
+		<table tableName="notice" domainObjectName="Notice">		</table>		
+		<table tableName="building" domainObjectName="Building"></table>	
+		
+		<table tableName="u_action" domainObjectName="UAction"></table>
+		<table tableName="u_action_detail" domainObjectName="UActionDetail"></table>	
+		<table tableName="uphoto" domainObjectName="UPhoto"></table>	
+		<table tableName="sms_code" domainObjectName="Smscode"></table>	
+		<table tableName="sms_prefercode" domainObjectName="SmsPrefercode"></table>	
+		<table tableName="coach" domainObjectName="Coach"></table>	
+		<table tableName="coachphoto" domainObjectName="Coachphoto"></table>	
+				
+		<table tableName="product" domainObjectName="Product"></table>
+		<table tableName="orders" domainObjectName="Orders"></table>
+		<table tableName="feedback" domainObjectName="Feedback"></table>
+		<table tableName="chat" domainObjectName="Chat"></table>
+		<table tableName="coach" domainObjectName="Coach"></table>
+		<table tableName="my_action" domainObjectName="MyAction"></table>
+		<table tableName="u_action" domainObjectName="UAction"></table>
+		<table tableName="my_action" domainObjectName="MyAction"></table>
+		<table tableName="frontuser" domainObjectName="FrontUser">		</table>
+		<table tableName="u_action" domainObjectName="UAction"></table>
+		<table tableName="coach" domainObjectName="Coach"></table>	
+		<table tableName="barea" domainObjectName="Barea"></table>
+		
+		<table tableName="chat" domainObjectName="Chat"></table>
+		<table tableName="frontuser" domainObjectName="FrontUser">		</table>
+			<table tableName="friend" domainObjectName="Friend">		</table>
+			
+			<table tableName="friend" domainObjectName="Friend">		</table>
+			<table tableName="u_blog" domainObjectName="UBlog"></table>
+			<table tableName="frontuser" domainObjectName="FrontUser">		</table>
+					<table tableName="team" domainObjectName="Team">		</table>
+
+		
+			<table tableName="user_level" domainObjectName="UserLevel"></table>
+			 <table tableName="team" domainObjectName="Team">	</table>
+			<table tableName="u_action" domainObjectName="UAction"></table>	
+			
+			<table tableName="frontuser" domainObjectName="FrontUser"></table>	
+			 <table tableName="u_action" domainObjectName="UAction"></table>
+		<table tableName="hotitem" domainObjectName="Hotitem"></table>
+		<table tableName="dream" domainObjectName="Dream"></table>
+		<table tableName="friend" domainObjectName="Friend">		</table>
+			 <table tableName="topictag" domainObjectName="Topictag">		</table>
+			 <table tableName="dream" domainObjectName="Dream">		</table>
+		<table tableName="frontuser" domainObjectName="FrontUser">		</table>
+		<table tableName="topic" domainObjectName="Topic">		</table>		
+			
+		<table tableName="frontuser_tag" domainObjectName="FrontUserTag">		</table> 
+		<table tableName="topic_vote_user" domainObjectName="TopicVoteUser">		</table>
+		<table tableName="frontuser_d" domainObjectName="FrontUserD"></table>	
+		<table tableName="my_action" domainObjectName="myAction"></table>
+		
+		<table tableName="product_supply" domainObjectName="ProductSupply"></table>
+		<table tableName="product_coach" domainObjectName="ProductCoach"></table>
+		<table tableName="club" domainObjectName="Club"></table>		
+		<table tableName="supply" domainObjectName="Supply"></table>
+		<table tableName="product_coach" domainObjectName="ProductCoach"></table>
+		<table tableName="club" domainObjectName="Club"></table>	
+			
+		-->
+		<table tableName="user" domainObjectName="User"></table>
+			
+			
+		
+	</context>
+</generatorConfiguration>
