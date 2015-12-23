@@ -90,7 +90,8 @@ public class ExampleWhereClauseElementGenerator extends
             }
         }
 		**/
-        // by walker
+        // by walker 通用的where查询
+        whereElement.addElement(new TextElement(" 1 = 1 "));
         StringBuilder sb = new StringBuilder();       
         int length = introspectedTable.getAllColumns().size();
         for (int i=0;i<length;i++ ) {
@@ -107,11 +108,8 @@ public class ExampleWhereClauseElementGenerator extends
 					</if>
              */
             sb.setLength(0);
-            // the first one 
-            if(i!=0) {
-            	if(i==1) sb.append(" ");
-            	else sb.append(", and ");
-            }
+            sb.append(" and ");
+
             sb.append(MyBatis3FormattingUtilities
                     .getEscapedColumnName(introspectedColumn));
             sb.append(" = ");

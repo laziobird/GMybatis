@@ -48,10 +48,10 @@ public class SelectByExampleWithoutBLOBsElementGenerator extends
         context.getCommentGenerator().addComment(answer);
 
         answer.addElement(new TextElement("select")); //$NON-NLS-1$
-        XmlElement ifElement = new XmlElement("if"); //$NON-NLS-1$
-        ifElement.addAttribute(new Attribute("test", "distinct")); //$NON-NLS-1$ //$NON-NLS-2$
-        ifElement.addElement(new TextElement("distinct")); //$NON-NLS-1$
-        answer.addElement(ifElement);
+//        XmlElement ifElement = new XmlElement("if"); //$NON-NLS-1$
+//        ifElement.addAttribute(new Attribute("test", "distinct")); //$NON-NLS-1$ //$NON-NLS-2$
+//        ifElement.addElement(new TextElement("distinct")); //$NON-NLS-1$
+//        answer.addElement(ifElement);
 
         StringBuilder sb = new StringBuilder();
         if (stringHasValue(introspectedTable
@@ -70,10 +70,10 @@ public class SelectByExampleWithoutBLOBsElementGenerator extends
         answer.addElement((new TextElement(sb.toString())));
         answer.addElement(getExampleIncludeElement());
 
-        ifElement = new XmlElement("if"); //$NON-NLS-1$
-        ifElement.addAttribute(new Attribute("test", "orderByClause != null")); //$NON-NLS-1$ //$NON-NLS-2$
-        ifElement.addElement(new TextElement("order by ${orderByClause}")); //$NON-NLS-1$
-        answer.addElement(ifElement);
+//        ifElement = new XmlElement("if"); //$NON-NLS-1$
+//        ifElement.addAttribute(new Attribute("test", "orderByClause != null")); //$NON-NLS-1$ //$NON-NLS-2$
+//        ifElement.addElement(new TextElement("order by ${orderByClause}")); //$NON-NLS-1$
+//        answer.addElement(ifElement);
 
         if (context.getPlugins()
                 .sqlMapSelectByExampleWithoutBLOBsElementGenerated(answer,
